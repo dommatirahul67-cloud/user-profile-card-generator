@@ -1,5 +1,7 @@
 
-const API_URL = "http://localhost:5000/api";
+
+const API_URL = "https://user-profile-card-generator-jui2.onrender.com/api";
+
 
 const form = document.getElementById("profileForm");
 const submitButton = document.getElementById("submitButton");
