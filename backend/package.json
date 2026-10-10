@@ -1,0 +1,19 @@
+{
+  "name": "user-profile-card-generator",
+  "version": "1.0.0",
+  "description": "Full-stack dynamic profile card generator for the Workora internship",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "profile-card",
+    "nodejs",
+    "express",
+    "supabase"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

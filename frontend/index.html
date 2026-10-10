@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <title>ProfileForge | Profile Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">P</span>
+      <span>Profile<span class="brand-accent">Forge</span></span>
+    </a>
+    <span class="topbar-label">PROFILE CARD GENERATOR</span>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <span class="eyebrow"><span class="status-dot"></span> YOUR DIGITAL IDENTITY</span>
+      <h1>Make your profile<br /><span>stand out.</span></h1>
+      <p>Create a profile card that showcases your story, skills, and social presence — all in one place.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="form-panel">
+        <div class="panel-heading">
+          <div>
+            <span class="section-number">01 / YOUR DETAILS</span>
+            <h2>Build your profile</h2>
+          </div>
+          <span class="edit-icon">✳</span>
+        </div>
+
+        <form id="profileForm">
+          <label for="name">Full name <span>*</span></label>
+          <input id="name" name="name" type="text" maxlength="80"
+            placeholder="e.g. John Doe" required />
+
+          <label for="bio">Short bio</label>
+          <textarea id="bio" name="bio" maxlength="500" rows="3"
+            placeholder="A little about who you are..."></textarea>
+          <div class="field-hint">Tell people what you do and what drives you.</div>
+
+          <label for="skills">Skills <span>*</span></label>
+          <input id="skills" name="skills" type="text"
+            placeholder="JavaScript, React, Node.js" required />
+          <div class="field-hint">Separate each skill with a comma (maximum 20).</div>
+
+          <label for="avatarUrl">Avatar image URL</label>
+          <input id="avatarUrl" name="avatarUrl" type="url"
+            placeholder="https://example.com/photo.jpg" />
+
+          <div class="social-heading">SOCIAL PRESENCE</div>
+
+          <label for="github">GitHub URL</label>
+          <input id="github" name="github" type="url"
+            placeholder="https://github.com/username" />
+
+          <label for="linkedin">LinkedIn URL</label>
+          <input id="linkedin" name="linkedin" type="url"
+            placeholder="https://linkedin.com/in/username" />
+
+          <label for="portfolio">Portfolio URL</label>
+          <input id="portfolio" name="portfolio" type="url"
+            placeholder="https://yourportfolio.com" />
+
+          <button id="submitButton" type="submit">
+            Generate my profile <span>↗</span>
+          </button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="preview-panel">
+        <div class="preview-heading">
+          <div>
+            <span class="section-number">02 / LIVE PREVIEW</span>
+            <h2>Your profile card</h2>
+          </div>
+          <span class="preview-badge">PREVIEW</span>
+        </div>
+
+        <div class="preview-stage">
+          <div class="profile-card" id="previewCard">
+            <div class="card-topline">
+              <span class="mini-brand">PF / PROFILE</span>
+              <span class="online-indicator"><span></span> OPEN TO CONNECT</span>
+            </div>
+            <div class="avatar-wrap">
+              <div class="avatar-placeholder" id="previewInitials">YN</div>
+            </div>
+            <h3 id="previewName">Your Name</h3>
+            <p class="preview-bio" id="previewBio">Your story begins here. Add a bio to introduce yourself.</p>
+            <div class="preview-skills" id="previewSkills">
+              <span class="skill-chip">Your skills</span>
+            </div>
+            <div class="preview-socials" id="previewSocials">
+              <span class="empty-social">Your social links will appear here.</span>
+            </div>
+            <div class="card-footer">
+              <span>CREATED WITH PROFILEFORGE</span>
+              <span>✳</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-note">
+          <span>✦</span>
+          <p>Your details are previewed here. Generate your profile to save it to the database.</p>
+        </div>
+
+        <section class="saved-section">
+          <div class="saved-heading">
+            <div>
+              <span class="section-number">03 / DATABASE</span>
+              <h2>Saved profile</h2>
+            </div>
+          </div>
+          <div id="savedProfile" class="saved-profile">
+            <p>Your saved profile will appear here after generation.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>PROFILEFORGE © 2026</span>
+      <span>Designed to make your first impression count.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
